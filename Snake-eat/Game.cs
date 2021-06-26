@@ -54,6 +54,8 @@ namespace WindowsFormsApp1
         bool hit = false;
         bool hit2 = false;
 
+        int res = 0;
+
         #endregion
 
         #region Game_Load_initialization
@@ -196,11 +198,11 @@ namespace WindowsFormsApp1
 
             for (int i = 0; i < snakeX2.Count; i++)
             {
-                mapArray[snakeY2[i], snakeX2[i]].BackColor = Color.Blue;//label数组mapArry,根据蛇身的下标，改变label的颜色当作蛇身
+                mapArray[snakeY2[i], snakeX2[i]].BackColor = Color.DarkOrchid;//label数组mapArry,根据蛇身的下标，改变label的颜色当作蛇身
             }
 
             mapArray[snakeY[snakeY.Count - 1], snakeX[snakeX.Count - 1]].BackColor = Color.Black;
-            mapArray[snakeY2[snakeY2.Count - 1], snakeX2[snakeX2.Count - 1]].BackColor = Color.Black;
+            mapArray[snakeY2[snakeY2.Count - 1], snakeX2[snakeX2.Count - 1]].BackColor = Color.DarkMagenta;
         }
         #endregion
 
@@ -349,7 +351,8 @@ namespace WindowsFormsApp1
                     timer1.Stop();
                     //PlayerMusic(Sound.gameover);//播放死亡的音乐
                     MessageBox.Show("你把自己咬死了！！！");
-                    if (Score > MaxScore)//如果打破了记录
+                    res = Math.Max(Score, Score2);
+                    if (res > MaxScore)//如果打破了记录
                     {
                         BreadARecord();//将新纪录写入文件
                     }
@@ -365,7 +368,8 @@ namespace WindowsFormsApp1
                     timer1.Stop();
                     //PlayerMusic(Sound.gameover);//播放死亡的音乐
                     MessageBox.Show("你把自己咬死了！！！");
-                    if (Score > MaxScore)//如果打破了记录
+                    res = Math.Max(Score, Score2);
+                    if (res > MaxScore)//如果打破了记录
                     {
                         BreadARecord();//将新纪录写入文件
                     }
@@ -383,7 +387,8 @@ namespace WindowsFormsApp1
             {
                 timer1.Stop();
                 meanwhile1 = true;
-                if (Score > MaxScore)//如果打破了记录
+                res = Math.Max(Score, Score2);
+                if (res > MaxScore)//如果打破了记录
                 {
                     BreadARecord();//将新纪录写入文件
                 }
@@ -398,7 +403,8 @@ namespace WindowsFormsApp1
             {
                 timer1.Stop();
                 meanwhile2 = true;
-                if (Score > MaxScore)//如果打破了记录
+                res = Math.Max(Score, Score2);
+                if (res > MaxScore)//如果打破了记录
                 {
                     BreadARecord();//将新纪录写入文件
                 }

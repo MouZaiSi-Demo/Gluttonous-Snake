@@ -45,5 +45,10 @@ namespace WindowsFormsApp1
             Form1 game3 = new Form1();
             game3.ShowDialog();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

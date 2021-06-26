@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@ namespace WindowsFormsApp1
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(136, 116);
+            this.button3.Location = new System.Drawing.Point(401, 121);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(175, 53);
             this.button3.TabIndex = 6;
@@ -46,7 +47,7 @@ namespace WindowsFormsApp1
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(336, 116);
+            this.button4.Location = new System.Drawing.Point(401, 197);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(175, 53);
             this.button4.TabIndex = 7;
@@ -56,7 +57,7 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(0, 229);
+            this.button1.Location = new System.Drawing.Point(48, 121);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 53);
             this.button1.TabIndex = 8;
@@ -68,13 +69,16 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 284);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(739, 415);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
 
         }

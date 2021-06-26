@@ -294,7 +294,7 @@ namespace WindowsFormsApp1
         {
             string newKey = e.KeyCode.ToString();
             //注意，当蛇向右时不能直接向左。同理，其他情况也类似
-            List<string> list = new List<string>() { "A", "W", "D", "S", "P", "L" };// 用于判断是否为该六个键值
+            List<string> list = new List<string>() { "A", "W", "D", "S", "P", "O" };// 用于判断是否为该六个键值
             if (list.Contains(newKey) == false)//若按下的键不是这六个键的话
             {
                 return;
@@ -312,7 +312,7 @@ namespace WindowsFormsApp1
                 timer2.Stop();
                 return;
             }
-            if (newKey == "L")
+            if (newKey == "O")
             {
                 timer1.Start();
                 timer2.Start();
